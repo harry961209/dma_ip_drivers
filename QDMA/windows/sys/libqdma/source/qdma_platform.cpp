@@ -125,12 +125,31 @@ int qdma_get_err_code(
         return STATUS_UNSUCCESSFUL;
 }
 
-void *qdma_calloc(
-    uint32_t num_blocks,
-    uint32_t size)
+//void *qdma_calloc(
+//    uint32_t num_blocks,
+//    uint32_t size)
+//{
+//    size_t total_size = (size_t)num_blocks * size;
+//    void *ptr = ExAllocatePoolWithTag(NonPagedPoolNx, total_size, QDMA_MEMPOOL_TAG);
+//    if (ptr != NULL) {
+//        RtlZeroMemory(ptr, total_size);
+//    }
+//
+//    return ptr;
+//}
+
+// Updated qdma_calloc to use ExAllocatePool2 for Windows 10 RS2 and above @harry
+void* qdma_calloc(uint32_t num_blocks, uint32_t size)
 {
     size_t total_size = (size_t)num_blocks * size;
-    void *ptr = ExAllocatePoolWithTag(NonPagedPoolNx, total_size, QDMA_MEMPOOL_TAG);
+    void* ptr = NULL;
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)  // Windows 10 RS2 ÀÌ»ף
+    ptr = ExAllocatePool2(POOL_FLAG_NON_PAGED, total_size, 'Qdma');
+#else
+    ptr = ExAllocatePoolWithTag(NonPagedPoolNx, total_size, QDMA_MEMPOOL_TAG);
+#endif
+
     if (ptr != NULL) {
         RtlZeroMemory(ptr, total_size);
     }

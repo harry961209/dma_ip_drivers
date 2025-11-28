@@ -1,0 +1,13 @@
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\interrupts.cpp;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\interrupts.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma.cpp;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\qdma.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_access\eqdma_soft_access\eqdma_soft_access.c;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\eqdma_soft_access.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_access\eqdma_soft_access\eqdma_soft_reg_dump.c;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\eqdma_soft_reg_dump.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_access\qdma_access_common.c;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\qdma_access_common.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_access\qdma_list.c;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\qdma_list.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_access\qdma_resource_mgmt.c;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\qdma_resource_mgmt.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_access\qdma_s80_hard_access\qdma_s80_hard_access.c;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\qdma_s80_hard_access.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_access\qdma_s80_hard_access\qdma_s80_hard_reg_dump.c;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\qdma_s80_hard_reg_dump.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_access\qdma_soft_access\qdma_soft_access.c;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\qdma_soft_access.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_platform.cpp;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\qdma_platform.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\thread.cpp;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\thread.obj
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\xpcie.cpp;D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\libqdma\xpcie.obj

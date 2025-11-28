@@ -1,0 +1,16 @@
+﻿  Building 'libqdma' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  interrupts.cpp
+  qdma.cpp
+  eqdma_soft_access.c
+  eqdma_soft_reg_dump.c
+  qdma_access_common.c
+  qdma_list.c
+  qdma_resource_mgmt.c
+  qdma_s80_hard_access.c
+  qdma_s80_hard_reg_dump.c
+  qdma_soft_access.c
+  qdma_platform.cpp
+  thread.cpp
+  xpcie.cpp
+  코드를 생성하고 있습니다...
+  libqdma.vcxproj -> D:\git\dma_ip_drivers\QDMA\windows\build\x64\Release\libqdma\QDMA.lib

@@ -297,8 +297,16 @@ static void io_st_zero_write_dma(
     /** construct one element sg_list */
     constexpr size_t sg_list_len = sizeof(SCATTER_GATHER_LIST) + sizeof(SCATTER_GATHER_ELEMENT);
     PSCATTER_GATHER_LIST sg_list;
-
+    
+    // sg_list = (PSCATTER_GATHER_LIST)ExAllocatePoolWithTag(NonPagedPoolNx, sg_list_len, IO_QUEUE_TAG);
+    // Use ExAllocatePool2 for Windows 10 RS2 and above
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
+    sg_list = (PSCATTER_GATHER_LIST)ExAllocatePool2(POOL_FLAG_NON_PAGED, sg_list_len, IO_QUEUE_TAG);
+    priv = (ST_DMA_ZERO_TX_PRIV*)ExAllocatePool2(POOL_FLAG_NON_PAGED, sizeof(ST_DMA_ZERO_TX_PRIV), IO_QUEUE_TAG);
+#else
     sg_list = (PSCATTER_GATHER_LIST)ExAllocatePoolWithTag(NonPagedPoolNx, sg_list_len, IO_QUEUE_TAG);
+    priv = (ST_DMA_ZERO_TX_PRIV*)ExAllocatePoolWithTag(NonPagedPoolNx, sizeof(ST_DMA_ZERO_TX_PRIV), IO_QUEUE_TAG);
+#endif
     if (sg_list == NULL) {
         TraceVerbose(TRACE_IO, "sg_list: Mem alloc failed\n");
         return;
@@ -310,7 +318,7 @@ static void io_st_zero_write_dma(
     sg_list->Elements[0].Address.QuadPart = NULL;
     sg_list->Elements[0].Length = 0x0;
 
-    priv = (ST_DMA_ZERO_TX_PRIV*)ExAllocatePoolWithTag(NonPagedPoolNx, sizeof(ST_DMA_ZERO_TX_PRIV), IO_QUEUE_TAG);
+    //priv = (ST_DMA_ZERO_TX_PRIV*)ExAllocatePoolWithTag(NonPagedPoolNx, sizeof(ST_DMA_ZERO_TX_PRIV), IO_QUEUE_TAG);
     if (priv == NULL) {
         ExFreePoolWithTag(sg_list, IO_QUEUE_TAG);
         TraceVerbose(TRACE_IO, "priv: Mem alloc failed\n");

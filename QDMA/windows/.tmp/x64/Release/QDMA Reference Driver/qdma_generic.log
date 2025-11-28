@@ -1,0 +1,29 @@
+﻿  Building 'QDMA Reference Driver' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping D:\git\dma_ip_drivers\QDMA\windows\.tmp\x64\Release\QDMA Reference Driver\qdma.inf
+  Stamping [Version] section with DriverVer=11/28/2025,10.56.22.52
+  device.cpp
+  driver.cpp
+  io_queue.cpp
+  코드를 생성하고 있습니다...
+  qdma_generic.vcxproj -> D:\git\dma_ip_drivers\QDMA\windows\build\x64\Release\sys\QDMA.sys
+  Done Adding Additional Store
+  Successfully signed: D:\git\dma_ip_drivers\QDMA\windows\build\x64\Release\sys\QDMA.sys
+  
+  .........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  D:\git\dma_ip_drivers\QDMA\windows\build\x64\Release\sys\QDMA Reference Driver\qdma.cat
+  Set catalog attribute.
+  WdkVersion: 10.0.26100.0
+  Set catalog attribute.
+  WdkAssemblyVersion: 10.0.26100.6584
+  Done Adding Additional Store
+  Successfully signed: D:\git\dma_ip_drivers\QDMA\windows\build\x64\Release\sys\QDMA Reference Driver\qdma.cat
+  

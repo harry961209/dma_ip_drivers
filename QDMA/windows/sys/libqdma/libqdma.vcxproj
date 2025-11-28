@@ -28,7 +28,7 @@
     <Platform Condition="'$(Platform)' == ''">Win32</Platform>
     <RootNamespace>MDMA</RootNamespace>
     <ProjectName>libqdma</ProjectName>
-    <WindowsTargetPlatformVersion>$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -1,0 +1,4 @@
+﻿  Building 'libqdma' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  qdma_platform.cpp
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_platform.cpp(133,17): error C2220: 다음 경고는 오류로 처리됩니다.
+D:\git\dma_ip_drivers\QDMA\windows\sys\libqdma\source\qdma_platform.cpp(133,17): warning C4996: 'ExAllocatePoolWithTag': ExAllocatePoolWithTag is deprecated, use ExAllocatePool2.

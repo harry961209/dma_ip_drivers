@@ -28,6 +28,7 @@
     <Platform Condition="'$(Platform)' == ''">Win32</Platform>
     <RootNamespace>MDMA</RootNamespace>
     <ProjectName>QDMA Reference Driver</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -156,6 +157,9 @@
     </ClCompile>
     <Inf />
     <ResourceCompile />
+    <DriverSign>
+      <FileDigestAlgorithm>SHA256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -174,6 +178,9 @@
     <Inf />
     <Inf />
     <Inf />
+    <DriverSign>
+      <FileDigestAlgorithm>SHA256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemGroup>
     <FilesToPackage Include="$(TargetPath)" />
